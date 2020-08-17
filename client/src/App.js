@@ -7,7 +7,7 @@ import Form from "./components/Form";
 import Wrapper from "./components/Wrapper";
 import NoMatch from "./pages/NoMatch";
 import Search from "./pages/search";
-//import Saved from "./pages/Saved"
+import Saved from "./pages/saved"
 import "./App.css";
 
 class App extends Component {
@@ -20,7 +20,7 @@ class App extends Component {
           <Wrapper>
             <Route exact path="/" Component={Search} />
             <Route exact path="/search" Component={Search} />
-            {/*<Route exact path="/saved" Component={Saved} />*/}
+            <Route exact path="/saved" Component={Saved} />
             <Route exact path="/noMatch" Component={NoMatch} />
           </Wrapper>
         </div>
