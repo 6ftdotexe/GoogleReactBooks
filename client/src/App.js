@@ -1,21 +1,29 @@
 import React, { Component } from "react";
-import logo from "./logo.svg";
+import NavBar from "./components/Navbar";
+import Header from "./components/Header";
+import Results from "./components/Results";
+import Search from "./components/Search";
+import Wrapper from "./components/Wrapper";
 import "./App.css";
 
 class App extends Component {
+  state = { results }
+
   render() {
     return (
-      <div className="App">
-        <div className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h2>Welcome to React</h2>
+      <Router>
+        <div>
+          <NavBar />
+          <Header />
+          <Wrapper>
+            <Route exact path="/" Component={search} />
+            <Route exact path="/search" Component={search} />
+            <Route exact path="/saved" Component={saved} />
+          </Wrapper>
         </div>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-      </div>
-    );
-  }
-}
+      </Router>
+    )
+  };
+};
 
 export default App;
