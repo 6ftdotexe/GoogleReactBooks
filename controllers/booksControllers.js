@@ -7,16 +7,16 @@ module.exports = {
             .sort({ date: -1 })
             .then(dbModel => res.json(dbModel))
             .catch(err => {
-                console.error(err);
+                console.error(err)
                 res.status(422).json(err)
             });
     },
-    findbyId: function (req, res) {
+    findById: function (req, res) {
         db.Book
-            .findbyId(req.params.id)
+            .findById(req.params.id)
             .then(dbModel => res.json(dbModel))
             .catch(err => {
-                console.error(err);
+                console.error(err)
                 res.status(422).json(err)
             });
     },
@@ -25,7 +25,7 @@ module.exports = {
             .create(req.body)
             .then(dbModel => res.json(dbModel))
             .catch(err => {
-                console.error(err);
+                console.error(err)
                 res.status(422).json(err)
             });
     },
@@ -34,7 +34,7 @@ module.exports = {
             .findOneAndUpdate({ _id: req.params.id }, req.body)
             .then(dbModel => res.json(dbModel))
             .catch(err => {
-                console.error(err);
+                console.error(err)
                 res.status(422).json(err)
             });
     },
@@ -44,8 +44,8 @@ module.exports = {
             .then(dbModel => dbModel.remove())
             .then(dbModel => res.json(dbModel))
             .catch(err => {
-                console.error(err);
+                console.error(err)
                 res.status(422).json(err)
             });
     }
-}
+};
