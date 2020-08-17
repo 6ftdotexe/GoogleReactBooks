@@ -1,0 +1,13 @@
+.jumbotron {
+    background: url(background-1.jpg);
+    padding:100px;
+    background-position-y: center;
+}
+
+.boxed {
+    width:600px;
+    height:100px;
+    background-color: wheat;
+    opacity: 90%;
+    border-radius: 50px;
+  }
