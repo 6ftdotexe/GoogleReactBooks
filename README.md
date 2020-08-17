@@ -47,7 +47,7 @@
   SO THAT I can find and save books easily.
 ```
 
-## ![React Google Books Search Demo](.client/public/demo.gif)
+## ![React Google Books Search Demo](./client/public/demo.gif)
 
 ## Contributors
 
